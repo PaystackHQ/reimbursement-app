@@ -1,0 +1,39 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 2.4rem;
+  color: $textPrimary;
+}
+
+.h2 {
+  font-size: 2.1rem;
+  color: $textPrimary;
+}
+
+.h3 {
+  font-size: 1.8rem;
+  color: $textPrimary;
+}
+
+.h4 {
+  font-size: 1.6rem;
+  color: $textPrimary;
+}

@@ -8,12 +8,13 @@ export default {
 };
 </script>
 
-<style>
-@import './assets/styles/reset.scss';
+<style lang="scss">
+@import './styles/main.scss';
 
 .page {
-  background-color: #f0f4f6;
+  background: $bg;
   height: 100%;
   width: 100%;
+  overflow:auto;
 }
 </style>

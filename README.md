@@ -1,4 +1,4 @@
-# payback
+# Reimbursements app
 
 ## Project setup
 ```
