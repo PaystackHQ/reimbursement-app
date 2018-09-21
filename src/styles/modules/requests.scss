@@ -27,6 +27,7 @@
 .request-item {
   background: white;
   padding: 0 20px;
+  cursor: pointer;
   &__inner {
     padding: 20px 0;
     border-bottom: 1px solid lighten($bdMuted, 6%);
@@ -43,6 +44,12 @@
   &:last-child {
     border-radius: 0 0 $radius $radius;
     border-bottom: 0;
+  }
+  &:hover {
+    background-color: $bgMuted;
+  }
+  &.active {
+    background-color: $bgInfo;
   }
 
   &__name {
@@ -73,7 +80,7 @@
   }
 
   &__price {
-    margin-top: 6px;
+    margin-top: 4px;
     color: $textInfo;
     font-weight: bold;
     font-size: 1.8rem;
@@ -84,8 +91,12 @@
   width: 50%;
   height: 100%;
   background-color: $bgMuted;
+  position: relative;
 
   &__placeholder {
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     display: flex;

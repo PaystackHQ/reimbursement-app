@@ -4,6 +4,7 @@ import LoggedIn from './pages/LoggedIn.vue';
 import LoggedOut from './pages/LoggedOut.vue';
 import Login from './pages/access/Login.vue';
 import RequestList from './pages/requests/RequestList.vue';
+import Request from './pages/requests/Request.vue';
 import BeneficiaryList from './pages/beneficiaries/BeneficiaryList.vue';
 import Settings from './pages/settings/Settings.vue';
 
@@ -20,6 +21,13 @@ export default new Router({
           path: '/requests',
           name: 'Requests',
           component: RequestList,
+          children: [
+            {
+              path: '/requests/:id',
+              name: 'Request',
+              component: Request,
+            },
+          ],
         },
         {
           path: '/beneficiaries',

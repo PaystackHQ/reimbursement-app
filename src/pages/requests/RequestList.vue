@@ -3,7 +3,8 @@
     <div class="request-list">
       <div class="request-list-header"></div>
       <div class="request-list-items">
-        <div class="request-item" v-for="request in requests" :key="request.id">
+        <router-link tag="div" class="request-item" :class="{ active: $route.params.id == request.id }"
+          v-for="request in requests" :to="`/requests/${request.id}`"  :key="request.id">
           <div class="request-item__inner">
             <avatar style="height: 64px; width: 64px;" :name="fullName(request.user)" />
             <div class="request-item__details">
@@ -15,7 +16,7 @@
               <div class="request-item__price">{{ naira(request.amount) }}</div>
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <div class="request">
@@ -34,6 +35,9 @@ import requests from '@/mockData/requests';
 
 export default {
   name: 'RequestList',
+  mounted() {
+    console.log(this.$route);
+  },
   components: {
     Avatar,
   },
