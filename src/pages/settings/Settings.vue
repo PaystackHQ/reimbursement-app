@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'RequestList',
+  name: 'Settings',
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="avatar" :style="`background-image: url(${src})`" :class="{ 'avatar--rounded': circle }">
-    <span v-if="name && !src">{{ name[0].toUppercase }}</span>
+    <span v-if="name && !src">{{ displayName }}</span>
   </div>
 </template>
 
@@ -17,6 +17,19 @@ export default {
     circle: {
       type: Boolean,
       default: false,
+    },
+  },
+  computed: {
+    displayName() {
+      const splitName = this.name.split(' ');
+      if (splitName.length > 1) {
+        const firstItem = splitName[0];
+        const secondItem = splitName[1];
+        return `${firstItem[0]}${secondItem[0]}`.toUpperCase();
+      }
+
+      const item = splitName[0];
+      return `${item[0]}${item[1]}`.toUpperCase();
     },
   },
 };

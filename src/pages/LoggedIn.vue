@@ -3,11 +3,11 @@
     <div class="sidebar">
       <div class="sidebar__header">
         <img class="sidebar__icon" src="~@/assets/images/icon.png" alt="Icon">
-        <h1 class="text-info font-bold">Watchtower</h1>
+        <h1 class="text-info font-bold">Logbook</h1>
       </div>
       <div class="profile">
         <avatar />
-        <span class="profile__name">Kachi Popping</span>
+        <span class="profile__name">Onyekachi</span>
       </div>
       <ul class="sidebar__nav">
         <router-link tag="li" to="/requests" class="sidebar__nav-item" active-class="active">Requests</router-link>

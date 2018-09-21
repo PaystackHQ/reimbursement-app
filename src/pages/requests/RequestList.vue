@@ -1,14 +1,67 @@
 <template>
   <div class="page">
-
+    <div class="request-list">
+      <div class="request-list-header"></div>
+      <div class="request-list-items">
+        <div class="request-item" v-for="request in requests" :key="request.id">
+          <div class="request-item__inner">
+            <avatar style="height: 64px; width: 64px;" :name="fullName(request.user)" />
+            <div class="request-item__details">
+              <div class="request-item__name">{{ fullName(request.user) }}</div>
+              <div class="request-item__description">{{ request.title }}</div>
+            </div>
+            <div class="request-item__meta">
+              <div class="request-item__date">{{ timeAgo(request.createdAt) }}</div>
+              <div class="request-item__price">{{ naira(request.amount) }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="request">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
+import moment from 'moment';
+import Avatar from '@/components/Avatar.vue';
+import requests from '@/mockData/requests';
+
 export default {
   name: 'RequestList',
+  components: {
+    Avatar,
+  },
+  data() {
+    return {
+      requests,
+    };
+  },
+  methods: {
+    fullName(user) {
+      return `${user.firstName} ${user.lastName}`;
+    },
+    timeAgo(date) {
+      return moment(date).calendar(null, {
+        sameDay: 'Today',
+        lastDay: 'Yesterday',
+        lastWeek: 'Last ddd',
+        sameElse: "MMM Do, 'YY",
+      });
+    },
+    naira(amount) {
+      return `N${amount.toLocaleString('en-US', { minimumFractionDigits: 0 })}`;
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.page {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
 </style>
