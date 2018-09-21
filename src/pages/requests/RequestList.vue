@@ -19,6 +19,9 @@
       </div>
     </div>
     <div class="request">
+      <div class="request__placeholder">
+        <p class="text-muted">No requests selected</p>
+      </div>
       <router-view />
     </div>
   </div>
