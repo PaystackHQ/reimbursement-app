@@ -7,6 +7,9 @@
   box-shadow: 0 2px 15px 0 rgba(9, 165, 219, 0.005);
   z-index: 999;
   position: relative;
+  flex-basis: 250px;
+  flex-shrink: 0;
+  flex-grow: 0;
 
   &__header {
     width: 100%;

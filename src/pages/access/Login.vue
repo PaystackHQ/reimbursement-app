@@ -3,10 +3,10 @@
     <form class="login-form">
       <h1 class="h3 text-center font-bold">Welcome back</h1>
       <div class="form-group">
-        <input type="email" placeholder="Email address" class="form-input">
+        <input type="email" placeholder="Email address" class="input">
       </div>
       <div class="form-group">
-        <input type="password" placeholder="Password" class="form-input">
+        <input type="password" placeholder="Password" class="input">
       </div>
       <div class="form-actions">
         <base-button type="submit">Login</base-button>

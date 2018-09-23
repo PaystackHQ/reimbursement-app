@@ -33,4 +33,38 @@
   transition: all 300ms;
   cursor: pointer;
   outline: none;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &--sm {
+    font-size: 1.4rem;
+    padding: 12px 20px;
+    display: inline-block;
+    width: auto;
+    // min-width: 150px;
+  }
+
+  &--block {
+    display: block;
+  }
+
+  &--success {
+    background-color: $bgSuccess;
+    box-shadow: inset 0 0 0 1px $bdSuccess;
+    color: $textSuccess;
+  }
+
+  &--danger {
+    background-color: $bgDanger;
+    box-shadow: inset 0 0 0 1px $bdDanger;
+    color: $textDanger;
+  }
+
+  &--info {
+    background-color: $bgInfo;
+    box-shadow: inset 0 0 0 1px $bdInfo;
+    color: $textInfo;
+  }
 }
