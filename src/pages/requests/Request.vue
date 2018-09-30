@@ -76,8 +76,6 @@ export default {
 .input {
   flex-grow: 1;
 }
-.request-messages {
-}
 .empty-messages {
   height: 100%;
   width: 100%;

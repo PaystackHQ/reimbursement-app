@@ -7,10 +7,12 @@
 @import 'components/button';
 @import 'components/input';
 @import 'components/sidebar';
+@import 'components/table';
 
 // Modules
 @import 'modules/requests';
 @import 'modules/request';
+@import 'modules/shared';
 
 // Utilities
 @import 'utilities/text';

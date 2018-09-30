@@ -6,6 +6,7 @@ import Login from './pages/access/Login.vue';
 import RequestList from './pages/requests/RequestList.vue';
 import Request from './pages/requests/Request.vue';
 import BeneficiaryList from './pages/beneficiaries/BeneficiaryList.vue';
+import Beneficiary from './pages/beneficiaries/Beneficiary.vue';
 import Settings from './pages/settings/Settings.vue';
 
 Vue.use(Router);
@@ -19,7 +20,7 @@ export default new Router({
       children: [
         {
           path: '/requests',
-          name: 'Requests',
+          name: 'RequestList',
           component: RequestList,
           children: [
             {
@@ -31,9 +32,15 @@ export default new Router({
         },
         {
           path: '/beneficiaries',
-          name: 'Beneficiaries',
+          name: 'BeneficiaryList',
           component: BeneficiaryList,
         },
+        {
+          path: '/beneficiaries/:id',
+          name: 'Beneficiary',
+          component: Beneficiary,
+        },
+
         {
           path: '/settings',
           name: 'Settings',

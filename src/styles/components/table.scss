@@ -1,0 +1,38 @@
+.table {
+  width: 100%;
+}
+
+th {
+  padding: 20px 20px;
+  text-align: left;
+  border-bottom: 1px solid $bg;
+}
+
+td {
+  padding: 20px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  &.sm {
+    padding: 10px 20px;
+  }
+}
+
+tbody tr {
+  td {
+    transition: background-color 300ms;
+  }
+
+  &:last-child {
+    td {
+      border-bottom: 0;
+    }
+  }
+
+  &.link:hover {
+    td {
+      background-color: #fafafa;
+      cursor: pointer;
+    }
+  }
+}
