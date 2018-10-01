@@ -14,9 +14,10 @@
 @import 'components/page';
 
 // Modules
-@import 'modules/requests';
-@import 'modules/request';
-@import 'modules/beneficiary';
+@import 'pages/requests';
+@import 'pages/request';
+@import 'pages/beneficiary';
+@import 'pages/settings';
 
 // Utilities
 @import 'utilities/text';

@@ -45,7 +45,7 @@
             <ul>
               <request-list-item :request="request" v-for="request in requests" :active="false" :key="request.id" :hideAvatar="true" :pad="true" />
             </ul>
-            <div class="card__footer text-center">
+            <div class="card__footer text-center" style="border-top: none;">
               <router-link tag="button" to="/requests" class="button button--info button--sm">View all requests</router-link>
             </div>
           </div>

@@ -1,3 +1,53 @@
-.form-group {
-  margin-bottom: 4px;
+.form {
+  &--login {
+    width: 300px;
+    margin: 150px auto 0;
+  }
+
+  max-width: 400px;
+  margin: auto;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__group {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .form--login {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    color: $textSecondary;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  &__actions {
+    margin-top: 30px;
+    .form--login {
+      margin-top: 15px;
+    }
+  }
+
+  &__action--alt {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: $textMuted;
+    transition: all 300ms;
+    font-size: 1.4rem;
+
+    &:hover {
+      color: $textPrimary;
+    }
+  }
 }

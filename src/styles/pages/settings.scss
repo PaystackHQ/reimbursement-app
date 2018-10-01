@@ -1,0 +1,27 @@
+.settings {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .account-info {
+    flex-basis: 50%;
+    margin-right: 12.5px;
+  }
+
+  .profile-picture {
+    margin-left: 12.5px;
+    flex-basis: 50%;
+
+    .avatar {
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      width: 450px;
+      margin: auto;
+    }
+
+    &__title {
+      margin-bottom: 15px;
+    }
+  }
+}

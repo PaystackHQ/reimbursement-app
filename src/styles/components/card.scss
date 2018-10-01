@@ -14,5 +14,10 @@
   &__footer {
     padding-top: 25px;
     padding-bottom: 5px;
+    border-top: 1px solid $bg;
+  }
+
+  &__body {
+    padding: 30px 0;
   }
 }
