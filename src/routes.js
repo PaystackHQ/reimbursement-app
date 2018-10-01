@@ -12,6 +12,8 @@ import Settings from './pages/settings/Settings.vue';
 Vue.use(Router);
 
 export default new Router({
+  linkActiveClass: 'active',
+  linkExactActiveClass: 'exact-active',
   routes: [
     {
       path: '/',

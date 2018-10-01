@@ -1,5 +1,5 @@
 <template>
-  <div class="avatar" :style="`background-image: url(${src})`" :class="{ 'avatar--rounded': circle }">
+  <div class="avatar" :style="`background-image: url(${src})`" :class="{ 'avatar--rounded': circle, 'avatar--lg': lg }">
     <span v-if="name && !src">{{ displayName }}</span>
   </div>
 </template>
@@ -15,6 +15,10 @@ export default {
       type: String,
     },
     circle: {
+      type: Boolean,
+      default: false,
+    },
+    lg: {
       type: Boolean,
       default: false,
     },
@@ -51,6 +55,11 @@ export default {
 
   &--rounded {
     border-radius: 100%;
+  }
+
+  &--lg {
+    height: 72px;
+    width: 72px;
   }
 }
 </style>

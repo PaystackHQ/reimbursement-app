@@ -1,0 +1,18 @@
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: $radius;
+
+  &__header {
+    padding-top: 5px;
+    padding-bottom: 25px;
+    text-align: center;
+    border-bottom: 1px solid $bg;
+    font-weight: bold;
+  }
+
+  &__footer {
+    padding-top: 25px;
+    padding-bottom: 5px;
+  }
+}

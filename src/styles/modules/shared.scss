@@ -1,11 +1,18 @@
 .page-header {
   width: 100%;
-  padding: 30px;
+  padding: 0 20px;
   box-shadow: 0 2px 10px 0 rgba(9, 165, 219, 0.08);
   height: 74px;
   flex-basis: 74px;
   flex-grow: 0;
   flex-shrink: 0;
+  align-items: center;
+  display: flex;
+
+  &--white {
+    background: white;
+    box-shadow: 0 2px 10px 0 rgba(9, 165, 219, 0.005);
+  }
 }
 
 .page-body {
@@ -13,10 +20,4 @@
   flex-grow: 1;
   overflow-y: scroll;
   padding: 25px;
-}
-
-.card {
-  background-color: white;
-  padding: 25px;
-  border-radius: $radius;
 }

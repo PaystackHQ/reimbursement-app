@@ -8,10 +8,13 @@
 @import 'components/input';
 @import 'components/sidebar';
 @import 'components/table';
+@import 'components/card';
+@import 'components/request-list-item';
 
 // Modules
 @import 'modules/requests';
 @import 'modules/request';
+@import 'modules/beneficiary';
 @import 'modules/shared';
 
 // Utilities

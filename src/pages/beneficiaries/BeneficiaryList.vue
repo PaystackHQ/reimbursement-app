@@ -14,13 +14,13 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="link" v-for="beneficiary in beneficiaries" :key="beneficiary.id">
+            <router-link tag="tr" :to="`beneficiaries/${beneficiary.id}`" class="link" v-for="beneficiary in beneficiaries" :key="beneficiary.id">
               <td>{{ beneficiary.name }}</td>
               <td>{{ beneficiary.phone }}</td>
               <td>{{ beneficiary.accountNumber }}</td>
               <td>{{ beneficiary.bank }}</td>
               <td class="text-info">{{ naira(beneficiary.totalPaid) }}</td>
-            </tr>
+            </router-link>
           </tbody>
         </table>
       </div>

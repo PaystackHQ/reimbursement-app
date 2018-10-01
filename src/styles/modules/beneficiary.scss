@@ -1,0 +1,39 @@
+.beneficiary {
+  display: flex;
+  flex-flow: row nowrap;
+
+  &-info {
+    flex-basis: 50%;
+    margin-right: 12.5px;
+
+    &__item {
+      text-align: left;
+      border-bottom: 1px solid $bg;
+      padding: 15px;
+      display: flex;
+
+      &-label {
+        flex-basis: 50%;
+        color: $textMuted;
+      }
+      &-content {
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+
+    &__header {
+      margin: 45px 0;
+    }
+
+    &__footer {
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &-requests {
+    margin-left: 12.5px;
+    flex-basis: 50%;
+  }
+}
