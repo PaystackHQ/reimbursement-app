@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <div class="request-list">
-      <div class="request-list-header"></div>
-      <ul class="request-list-items">
+      <div class="page-header"></div>
+      <ul class="page-body">
         <request-list-item v-for="request in requests" :key="request.id" :request="request" :active="$route.params.id === request.id" />
       </ul>
     </div>

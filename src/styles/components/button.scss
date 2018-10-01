@@ -88,4 +88,12 @@
       color: $textInfo;
     }
   }
+
+  &--action {
+    color: $textMuted;
+    display: inline-block;
+    width: auto;
+    background-color: transparent;
+    font-size: 1.4rem;
+  }
 }

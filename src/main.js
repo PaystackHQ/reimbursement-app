@@ -6,10 +6,12 @@ import router from './routes';
 import BaseButton from './components/BaseButton.vue';
 import Avatar from './components/Avatar.vue';
 import RequestListItem from './components/RequestListItem.vue';
+import Sidebar from './components/Sidebar.vue';
 
 Vue.component('BaseButton', BaseButton);
 Vue.component('Avatar', Avatar);
 Vue.component('RequestListItem', RequestListItem);
+Vue.component('Sidebar', Sidebar);
 
 Vue.config.productionTip = false;
 

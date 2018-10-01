@@ -13,8 +13,8 @@ td {
   text-align: left;
   border-bottom: 1px solid #eee;
   vertical-align: middle;
-  &.sm {
-    padding: 10px 20px;
+  .sm & {
+    padding: 12px 20px;
   }
 }
 

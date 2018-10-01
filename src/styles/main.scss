@@ -5,17 +5,18 @@
 // Components
 @import 'components/form';
 @import 'components/button';
+@import 'components/label';
 @import 'components/input';
 @import 'components/sidebar';
 @import 'components/table';
 @import 'components/card';
 @import 'components/request-list-item';
+@import 'components/page';
 
 // Modules
 @import 'modules/requests';
 @import 'modules/request';
 @import 'modules/beneficiary';
-@import 'modules/shared';
 
 // Utilities
 @import 'utilities/text';

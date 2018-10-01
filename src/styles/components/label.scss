@@ -1,0 +1,33 @@
+.label {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: $radius;
+  background-color: darken($bgMuted, 2%);
+  color: $textSecondary;
+  appearance: none;
+  transition: all 300ms;
+  outline: none;
+  // text-transform: uppercase;
+  font-weight: 500;
+
+  &--success {
+    background-color: $bgSuccess;
+    color: $textSuccess;
+  }
+
+  &--danger {
+    background-color: $bgDanger;
+    color: $textDanger;
+  }
+
+  &--info {
+    background-color: $bgInfo;
+    color: $textInfo;
+  }
+  &--warning {
+    background-color: $bgWarning;
+    color: $textWarning;
+  }
+}

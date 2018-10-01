@@ -7,6 +7,7 @@ import RequestList from './pages/requests/RequestList.vue';
 import Request from './pages/requests/Request.vue';
 import BeneficiaryList from './pages/beneficiaries/BeneficiaryList.vue';
 import Beneficiary from './pages/beneficiaries/Beneficiary.vue';
+import UserList from './pages/users/UserList.vue';
 import Settings from './pages/settings/Settings.vue';
 
 Vue.use(Router);
@@ -42,11 +43,15 @@ export default new Router({
           name: 'Beneficiary',
           component: Beneficiary,
         },
-
         {
           path: '/settings',
           name: 'Settings',
           component: Settings,
+        },
+        {
+          path: '/users',
+          name: 'UserList',
+          component: UserList,
         },
       ],
     },
