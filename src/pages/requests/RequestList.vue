@@ -6,7 +6,7 @@
           <button class="button button--sm button--muted">Filter Requests</button>
         </div>
         <div class="page-header__action">
-          <button class="button button--sm">New Request</button>
+          <button class="button button--sm" @click="showNewRequestForm = true">New Request</button>
         </div>
       </div>
       <ul class="page-body">
@@ -19,24 +19,25 @@
       </div>
       <router-view />
     </div>
+    <new-request :visible="showNewRequestForm" @close="showNewRequestForm = false" />
   </div>
 </template>
 
 <script>
-import Avatar from '@/components/Avatar.vue';
 import requests from '@/mockData/requests';
+import NewRequest from './NewRequest.vue';
 
 export default {
   name: 'RequestList',
   components: {
-    Avatar,
+    NewRequest,
   },
   data() {
     return {
       requests,
+      showNewRequestForm: false,
     };
   },
-
 };
 </script>
 

@@ -1,0 +1,41 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  justify-content: center;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 60px 0;
+}
+
+.modal-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modal-content {
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+// animations
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
