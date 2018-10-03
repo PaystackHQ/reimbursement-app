@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="page-header">
-      <router-link tag="button" to="/beneficiaries" class="button button--back">
+      <router-link tag="button" to="/beneficiaries" class="button button--sm button--muted">
         <span class="icon">&#8592;</span>Back
       </router-link>
     </div>

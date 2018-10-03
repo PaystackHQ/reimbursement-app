@@ -1,7 +1,14 @@
 <template>
   <div class="page">
     <div class="page-inner">
-      <div class="page-header"></div>
+      <div class="page-header">
+        <div class="page-header__filter">
+          <button class="button button--sm button--muted">Filter Beneficiaries</button>
+        </div>
+        <div class="page-header__action">
+          <button class="button button--sm">New Beneficiary</button>
+        </div>
+      </div>
       <div class="page-body">
         <div class="card">
           <table class="table">
