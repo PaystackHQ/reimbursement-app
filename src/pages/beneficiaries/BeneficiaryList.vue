@@ -6,7 +6,7 @@
           <button class="button button--sm button--muted">Filter Beneficiaries</button>
         </div>
         <div class="page-header__action">
-          <button class="button button--sm">New Beneficiary</button>
+          <button class="button button--sm" @click="showNewBeneficiaryForm = true">New Beneficiary</button>
         </div>
       </div>
       <div class="page-body">
@@ -34,18 +34,24 @@
         </div>
       </div>
     </div>
+    <new-beneficiary :visible="showNewBeneficiaryForm" @close="showNewBeneficiaryForm = false" />
   </div>
 </template>
 
 <script>
 import beneficiaries from '@/mockData/beneficiaries';
 import { naira } from '@/utilities';
+import NewBeneficiary from './NewBeneficiary.vue';
 
 export default {
   name: 'BeneficiaryList',
+  components: {
+    NewBeneficiary,
+  },
   data() {
     return {
       beneficiaries,
+      showNewBeneficiaryForm: false,
     };
   },
   methods: {
