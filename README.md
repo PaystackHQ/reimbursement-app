@@ -1,4 +1,6 @@
 # Reimbursements app
+This project contains the UI for an experimental reimbursements app for Paystack. The app introduces a better process for requesting, reimbursing and approving expenses for Paystack staff. 
+
 
 ## Project setup
 ```
