@@ -1,29 +1,21 @@
 <template>
   <modal :visible="visible" :width="500" @close="handleClose()">
-    <div slot="header" class="card__header">New Beneficiary</div>
+    <div slot="header" class="card__header">Change Password</div>
     <form class="form">
       <div class="form__group">
-        <label class="form__label">Name</label>
+        <label class="form__label">Old Password</label>
         <input type="text" class="input">
       </div>
       <div class="form__group">
-      <label class="form__label">Email address</label>
+        <label class="form__label">New Password</label>
         <input type="text" class="input">
       </div>
       <div class="form__group">
-        <label class="form__label">Phone number</label>
-        <input type="phone" class="input">
-      </div>
-      <div class="form__group">
-        <label class="form__label">Bank</label>
-        <input type="text" class="input">
-      </div>
-      <div class="form__group">
-        <label class="form__label">Account number</label>
+        <label class="form__label">Confirm New Password</label>
         <input type="text" class="input">
       </div>
       <div class="form__actions text-center">
-        <button class="button button--sm">Save beneficiary</button>
+        <button class="button button--sm">Change password</button>
       </div>
     </form>
   </modal>
@@ -31,7 +23,7 @@
 
 <script>
 export default {
-  name: 'NewRequest',
+  name: 'ChangePassword',
   props: {
     visible: {
       type: Boolean,
@@ -44,3 +36,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

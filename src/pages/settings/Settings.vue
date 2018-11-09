@@ -34,7 +34,7 @@
               </form>
             </div>
             <div class="card__footer text-center">
-              <button class="button button--sm button--info">Change password</button>
+              <button class="button button--sm button--info" @click="showChangePasswordModal = true">Change password</button>
             </div>
           </div>
         </div>
@@ -55,15 +55,20 @@
         </div>
       </div>
     </div>
+    <change-password :visible="showChangePasswordModal" @close="showChangePasswordModal = false" />
   </div>
 </template>
 
 <script>
 import beneficiaries from '@/mockData/beneficiaries';
 import requests from '@/mockData/requests';
+import ChangePassword from './ChangePassword.vue';
 
 export default {
   name: 'Settings',
+  components: {
+    ChangePassword,
+  },
   mounted() {
     const id = Number(this.$route.params.id);
     this.beneficiary = beneficiaries.find(b => b.id === id);
@@ -72,6 +77,7 @@ export default {
     return {
       beneficiary: {},
       requests: requests.slice(0, 5),
+      showChangePasswordModal: false,
     };
   },
 };
