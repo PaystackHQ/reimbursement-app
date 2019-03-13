@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && cd dist && mv index.html 200.html && surge . --domain expendly.surge.sh"
   },
   "dependencies": {
     "moment": "^2.22.2",

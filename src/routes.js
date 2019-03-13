@@ -12,6 +12,16 @@ import Settings from './pages/settings/Settings.vue';
 
 Vue.use(Router);
 
+const checkLoggedIn = (to, from, next) => {
+  try {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn) next();
+    else next('/login');
+  } catch (error) {
+    next('/login');
+  }
+};
+
 export default new Router({
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active',
@@ -20,6 +30,8 @@ export default new Router({
       path: '/',
       component: LoggedIn,
       name: 'LoggedIn',
+      beforeEnter: checkLoggedIn,
+      redirect: { name: 'RequestList' },
       children: [
         {
           path: '/requests',
